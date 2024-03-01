@@ -1,6 +1,22 @@
-# vue-game
+## Javascript game
 
-This template should help get you started developing with Vue 3 in Vite.
+![game](docs/game.png)
+![mobile](docs/mobile.png)
+
+
+
+### What has been done?
+
+- [x] Finding game assets
+- [x] Using Tiled to create a map
+- [x] Collision detection and map boundaries
+- [x] Player movement
+- [x] Player animation
+- [x] Sound effects
+
+
+
+
 
 ## Recommended IDE Setup
 
