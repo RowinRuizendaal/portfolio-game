@@ -170,21 +170,25 @@ export const windowEventKeyDown = () => {
 
         switch (key) {
             case 'w':
+            case 'ArrowUp':
             pressedKeysStore.setPressedkey('w', true)
             lastKey = 'w';
             break;
 
             case 'a':
+            case 'ArrowLeft':
             pressedKeysStore.setPressedkey('a', true)
             lastKey = 'a';
             break;
 
             case 's':
+            case 'ArrowDown':
             pressedKeysStore.setPressedkey('s', true)
             lastKey = 's';
             break;
 
             case 'd':
+            case 'ArrowRight':
             pressedKeysStore.setPressedkey('d', true)
             lastKey = 'd';
             break;
@@ -205,18 +209,22 @@ export const windowEventKeyUp = () => {
 
         switch (key) {
             case 'w':
+            case 'ArrowUp':
             pressedKeysStore.setPressedkey('w', false)
             break;
 
             case 'a':
+            case 'ArrowLeft':
             pressedKeysStore.setPressedkey('a', false)
             break;
 
             case 's':
+            case 'ArrowDown':
             pressedKeysStore.setPressedkey('s', false)
             break;
 
             case 'd':
+            case 'ArrowRight':
             pressedKeysStore.setPressedkey('d', false)
             break;
         }
