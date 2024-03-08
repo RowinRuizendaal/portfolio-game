@@ -6,7 +6,7 @@
       </p>
         <button @click="handleButtonClick" :class="styles.button">
           <p>{{ $t("controls.continue") }}</p>
-          <icon name="chevron" />
+          <icon name="chevron-down" />
         </button>
       </div>
     </div>

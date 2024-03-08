@@ -2,6 +2,7 @@
   <div>
     <CanvasComponent />
     <DialougeComponent :dialougeText="dialouge" />
+    <MobileNavigationComponent />
   </div>
 </template>
 
@@ -9,6 +10,7 @@
 import { defineComponent } from 'vue'
 import CanvasComponent from '@/components/Canvas'
 import DialougeComponent from '@/components/Dialouge'
+import MobileNavigationComponent from '@/components/MobileNavigation'
 import { intro } from './lib/dialogues';
 import { music } from '@/lib/music'
 
@@ -16,7 +18,8 @@ export default defineComponent({
   name: 'App',
   components: {
     CanvasComponent,
-    DialougeComponent
+    DialougeComponent,
+    MobileNavigationComponent
   },
   setup() {
     const isActive = true

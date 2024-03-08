@@ -192,6 +192,7 @@ export const windowEventKeyDown = () => {
     })
 }
 
+
 export const windowEventKeyUp = () => {
     const pressedKeysStore = usePressedKeysStore();
     window.addEventListener('keyup', (event) => {
@@ -224,3 +225,45 @@ export const windowEventKeyUp = () => {
 
 
 
+// mobile movements
+export const handleMobileMovementTouchStart = (code: HTMLButtonElement['className']) => {
+    const pressedKeysStore = usePressedKeysStore();
+
+    switch (code) {
+        case "up":
+            pressedKeysStore.setPressedkey('w', true)
+            lastKey = 'w';
+            break;
+        case "down":
+            pressedKeysStore.setPressedkey('s', true)
+            lastKey = 's';
+            break;
+        case "left":
+            pressedKeysStore.setPressedkey('a', true)
+            lastKey = 'a';
+            break;
+        case "right":
+            pressedKeysStore.setPressedkey('d', true)
+            lastKey = 'd';
+            break;
+    }
+};
+
+export const handleMobileMovementTouchEnd = (code: HTMLButtonElement['className']) => {
+    const pressedKeysStore = usePressedKeysStore();
+ 
+    switch (code) {
+        case "up":
+            pressedKeysStore.setPressedkey('w', false)
+            break;
+        case "down":
+            pressedKeysStore.setPressedkey('s', false)
+            break;
+        case "left":
+            pressedKeysStore.setPressedkey('a', false)
+            break;
+        case "right":
+            pressedKeysStore.setPressedkey('d', false)
+            break;
+    }
+};
