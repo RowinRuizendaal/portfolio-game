@@ -8,8 +8,7 @@ import { defineComponent } from 'vue'
 import { canvasSizes } from '@/lib/constants'
 import { useCanvasStore } from '@/stores/canvas' 
 import { windowEventAnimateFrame, windowEventKeyDown, windowEventKeyUp } from '@/lib/windowEvents' 
-import { generateBoundaries } from '@/lib/boundaries'
-import { music } from '@/lib/music'
+import { generateBoundaries } from '@/lib/generateBoundaries'
 
 export default defineComponent({
   name: 'CanvasComponent',
@@ -22,22 +21,17 @@ export default defineComponent({
   onMounted(() => {
     const ctx = canvasRef.value?.getContext('2d');
 
-    if (!ctx) {
+    if (!ctx || !canvasRef.value) {
       return;
     }
    
     store.setCanvasContext(ctx);
-  
+    
     generateBoundaries()
     windowEventAnimateFrame()
     windowEventKeyDown()
     windowEventKeyUp()
-
-    // temp since audio needs a user gesture to play
-    window.addEventListener('click', () => {
-      music.Map.play()
-    })
-
+    
   })
 
     return {
@@ -54,4 +48,4 @@ export default defineComponent({
 
 <style module lang="css">
 @import './Canvas.module.css';
-</style>
+</style>@/lib/generateBoundaries
