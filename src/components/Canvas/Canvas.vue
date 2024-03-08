@@ -48,4 +48,4 @@ export default defineComponent({
 
 <style module lang="css">
 @import './Canvas.module.css';
-</style>@/lib/generateBoundaries
+</style>
