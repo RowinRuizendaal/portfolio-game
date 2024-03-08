@@ -5,10 +5,10 @@ export const canvasSizes = {
     height: window.innerHeight,
 }
 
-// need to fix this
 export const offset = {
-    x: canvasSizes.width > 1000 ? -300 : -1000,
-    y: -450,
+    x: Math.floor(canvasSizes.width / 2) - 1000,
+    y: Math.floor(canvasSizes.height / 2) - 750,
 }
+
 
 export const tiledMapWidth = 70;

@@ -1,4 +1,4 @@
-import { getCanvasContext } from '@/lib/drawImages'
+import { getCanvasContext } from './store'
 import { debug } from '@/lib/constants'
 import { playerDownImage, playerLeftImage, playerRightImage, playerUpImage } from '@/lib/images'
 

@@ -3,6 +3,7 @@ import { usePressedKeysStore } from '@/stores/pressedKeys'
 import { useBoundariesStore } from '@/stores/boundaries'
 import { Boundary } from '@/lib/classes'
 import { retangularCollision } from '@/lib/rectangularCollision'
+import { dialougeIsActive} from './store'
 
 let lastKey = '';
 
@@ -158,7 +159,13 @@ export const windowEventAnimateFrame = () => {
 
 export const windowEventKeyDown = () => {
     const pressedKeysStore = usePressedKeysStore();
+
     window.addEventListener('keydown', (event) => {
+
+        if (dialougeIsActive()) {
+            return;
+        }
+
         const { key } = event;
 
         switch (key) {
@@ -188,6 +195,11 @@ export const windowEventKeyDown = () => {
 export const windowEventKeyUp = () => {
     const pressedKeysStore = usePressedKeysStore();
     window.addEventListener('keyup', (event) => {
+
+        if (dialougeIsActive()) {
+            return;
+        }
+
         const { key } = event;
 
         switch (key) {
