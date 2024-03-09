@@ -1,0 +1,6 @@
+{
+    "rules": {
+        "csstools/use-logical": true
+    },
+    "plugins": ["stylelint-use-logical"]
+}
