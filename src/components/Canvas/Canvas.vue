@@ -24,7 +24,7 @@ export default defineComponent({
       if (!ctx || !canvasRef.value) {
         return
       }
-
+      
       store.setCanvasContext(ctx)
 
       generateBoundaries()

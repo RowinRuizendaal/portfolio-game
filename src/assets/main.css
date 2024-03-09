@@ -5,6 +5,13 @@
   src: url('./fonts/runescape.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'runescapeFont-bold';
+  src: url('./fonts/runescape_bold.ttf') format('woff');
+  font-weight: bold;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -14,4 +21,8 @@
 body {
   font-family: 'runescapeFont', Roboto, sans-serif;
   overflow: hidden;
+}
+
+.bold {
+  font-family: 'runescapeFont-bold', Roboto, sans-serif;
 }
