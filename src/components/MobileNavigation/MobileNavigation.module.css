@@ -1,50 +1,50 @@
 .mobile-navigation {
-    @media screen and (min-width: 768px) {
-        display: none;
-    }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    bottom: 2rem;
-    right: 0;
-    padding: 3rem 2rem;
-    z-index: 3;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 2rem;
+  right: 0;
+  padding: 3rem 2rem;
+  z-index: 3;
 
-    .direction-buttons {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        gap: 5px;
-        grid-template-areas:
-            ". up ."
-            "left center right"
-            ". down .";
-    }
+  .direction-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    grid-template-areas:
+      '. up .'
+      'left center right'
+      '. down .';
+  }
 
-    button {
-        all: unset;
-        background-color: #333232;
-        color: white;
-        padding: 0.5rem;
-        border-radius: 5px;
-        cursor: pointer;
-    }
+  button {
+    all: unset;
+    background-color: #333232;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 
-    .direction-up {
-        grid-area: up;
-    }
+  .direction-up {
+    grid-area: up;
+  }
 
-    .direction-down {
-        grid-area: down;
-    }
+  .direction-down {
+    grid-area: down;
+  }
 
-    .direction-left {
-        grid-area: left;
-    }
+  .direction-left {
+    grid-area: left;
+  }
 
-    .direction-right {
-        grid-area: right;
-    }
+  .direction-right {
+    grid-area: right;
+  }
 }

@@ -1,3 +1,3 @@
-import MobileNavigationComponent from './MobileNavigation.vue';
+import MobileNavigationComponent from './MobileNavigation.vue'
 
-export default MobileNavigationComponent;
+export default MobileNavigationComponent

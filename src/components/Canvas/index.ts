@@ -1,3 +1,3 @@
-import CanvasComponent from './Canvas.vue';
+import CanvasComponent from './Canvas.vue'
 
-export default CanvasComponent;
+export default CanvasComponent

@@ -3,21 +3,20 @@ import { useCanvasStore } from '@/stores/canvas'
 import { storeToRefs } from 'pinia'
 
 export const dialougeIsActive = () => {
-    const store = useDialougeStore();
+  const store = useDialougeStore()
 
-    const { dialougeIsActive } = storeToRefs(store);
+  const { dialougeIsActive } = storeToRefs(store)
 
-    return dialougeIsActive.value
+  return dialougeIsActive.value
 }
 
 export const getCanvasContext = () => {
-    const store = useCanvasStore();
-    const canvasContext = store.getCanvasContext();
+  const store = useCanvasStore()
+  const canvasContext = store.getCanvasContext()
 
-    if (!canvasContext) {
-        return null;
-    }
+  if (!canvasContext) {
+    return null
+  }
 
-    return canvasContext;
-
+  return canvasContext
 }

@@ -1,9 +1,9 @@
-import { reactive } from "vue";
+import { reactive } from 'vue'
 
 export interface State {
-    dialougeIsActive: boolean;
+  dialougeIsActive: boolean
 }
 
 export const state: State = reactive({
-    dialougeIsActive: true,
-});
+  dialougeIsActive: true
+})

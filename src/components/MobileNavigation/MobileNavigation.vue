@@ -1,30 +1,29 @@
 <template>
-<div :class="styles['mobile-navigation']" v-if="!dialougeIsActive">
-   <div :class="styles['direction-buttons']">
+  <div :class="styles['mobile-navigation']" v-if="!dialougeIsActive">
+    <div :class="styles['direction-buttons']">
       <div :class="styles['direction-up']">
-         <button id="up" class="test">
-            <icon name="chevron-up" />
-         </button>
+        <button id="up" class="test">
+          <icon name="chevron-up" />
+        </button>
       </div>
       <div :class="styles['direction-down']">
         <button id="down">
-            <icon name="chevron-down" />
+          <icon name="chevron-down" />
         </button>
       </div>
       <div :class="styles['direction-left']">
         <button id="left">
-            <icon name="chevron-left" />
+          <icon name="chevron-left" />
         </button>
       </div>
       <div :class="styles['direction-right']">
         <button id="right">
-            <icon name="chevron-right" />
+          <icon name="chevron-right" />
         </button>
       </div>
-   </div>
-</div>
+    </div>
+  </div>
 </template>
-
 
 <script lang="ts">
 import { defineComponent, useCssModule, onUpdated } from 'vue'
@@ -41,39 +40,37 @@ export default defineComponent({
     const { dialougeIsActive } = storeToRefs(store)
 
     onUpdated(() => {
-        const allButtons = document.querySelectorAll('button')
+      const allButtons = document.querySelectorAll('button')
 
-        allButtons.forEach(button => {
-            button.addEventListener('touchstart', (event) => {
-                event.preventDefault()
-                
-                handleMobileMovementTouchStart(button.id)
-                
-            })
+      allButtons.forEach((button) => {
+        button.addEventListener('touchstart', (event) => {
+          event.preventDefault()
+
+          handleMobileMovementTouchStart(button.id)
         })
+      })
 
-        allButtons.forEach(button => {
-            button.addEventListener('touchend', (event) => {
-                event.preventDefault();
+      allButtons.forEach((button) => {
+        button.addEventListener('touchend', (event) => {
+          event.preventDefault()
 
-                handleMobileMovementTouchEnd(button.id);
-            })
+          handleMobileMovementTouchEnd(button.id)
         })
+      })
 
-        allButtons.forEach(button => {
-            button.addEventListener('click', (event) => {
-                handleMobileMovementTouchStart(button.id);
-            })
+      allButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          handleMobileMovementTouchStart(button.id)
         })
+      })
     })
 
     return {
-        styles,
-        dialougeIsActive
+      styles,
+      dialougeIsActive
     }
   }
 })
-
 </script>
 
 <style module lang="css">

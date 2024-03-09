@@ -1,10 +1,10 @@
 <template>
-    <component :is="icon" />
+  <component :is="icon" />
 </template>
 
 <script lang="ts">
-import { defineComponent} from 'vue'
-import { defineAsyncComponent } from 'vue';
+import { defineComponent } from 'vue'
+import { defineAsyncComponent } from 'vue'
 
 export default defineComponent({
   name: 'IconComponent',
@@ -18,9 +18,8 @@ export default defineComponent({
     const icon = defineAsyncComponent(() => import(`../../assets/${props.name}.svg`))
 
     return {
-        icon,
+      icon
     }
   }
 })
-
 </script>
