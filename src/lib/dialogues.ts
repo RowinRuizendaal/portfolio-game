@@ -1,3 +1,6 @@
+const isMobile = window.innerWidth <= 768
+
+
 export const intro = {
   dialouge: [
     {
@@ -16,7 +19,7 @@ export const intro = {
       text: 'dialouge.intro.p5'
     },
     {
-      text: 'dialouge.intro.p7'
+      text: isMobile ? 'dialouge.intro.p6' : 'dialouge.intro.p7'
     }
   ]
 }

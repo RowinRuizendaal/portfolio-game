@@ -5,7 +5,7 @@
         {{ translatedString }}
       </p>
       <button @click="handleButtonClick" :class="styles.button">
-        <p>{{ $t('controls.continue') }}</p>
+        <p class="bold">{{ $t('controls.continue') }}</p>
         <icon name="chevron-down" />
       </button>
     </div>
@@ -19,6 +19,7 @@ import { useI18n } from 'vue-i18n'
 import { useDialougeStore } from '@/stores/dialouge'
 import type { PropsProperties } from './type'
 import { storeToRefs } from 'pinia'
+import { music } from '@/lib/music'
 
 export default defineComponent({
   name: 'DialougeComponent',
@@ -49,6 +50,7 @@ export default defineComponent({
 
       if (index < totalDialougeLength) {
         index++
+        music.TextBox.play()
         return (translatedString.value = t(dialougeText[index].text))
       }
 
