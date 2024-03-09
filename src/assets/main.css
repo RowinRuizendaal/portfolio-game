@@ -2,9 +2,8 @@
 
 @font-face {
   font-family: 'runescapeFont';
-  src: url('./fonts/runescape.ttf') format('truetype'),
+  src: url('./fonts/runescape.ttf') format('truetype');
 }
-
 
 * {
   margin: 0;

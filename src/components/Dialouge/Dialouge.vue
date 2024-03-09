@@ -1,21 +1,21 @@
 <template>
-    <div :class="styles.dialouge" v-if="dialougeIsActive">
-      <div :class="styles.content">
-       <p :class="styles.paragraph">
+  <div :class="styles.dialouge" v-if="dialougeIsActive">
+    <div :class="styles.content">
+      <p :class="styles.paragraph">
         {{ translatedString }}
       </p>
-        <button @click="handleButtonClick" :class="styles.button">
-          <p>{{ $t("controls.continue") }}</p>
-          <icon name="chevron-down" />
-        </button>
-      </div>
+      <button @click="handleButtonClick" :class="styles.button">
+        <p>{{ $t('controls.continue') }}</p>
+        <icon name="chevron-down" />
+      </button>
     </div>
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, reactive, ref } from 'vue'
 import { useCssModule } from 'vue'
-import { useI18n } from 'vue-i18n';
+import { useI18n } from 'vue-i18n'
 import { useDialougeStore } from '@/stores/dialouge'
 import type { PropsProperties } from './type'
 import { storeToRefs } from 'pinia'
@@ -41,22 +41,22 @@ export default defineComponent({
     const { dialougeIsActive } = storeToRefs(store)
 
     // setup for dialouge
-    let index = 1;
+    let index = 1
     let translatedString = ref(t(dialougeText[0].text))
 
     const handleButtonClick = () => {
       const totalDialougeLength = dialougeText.length - 1
 
       if (index < totalDialougeLength) {
-          index++
-          return translatedString.value = t(dialougeText[index].text)
+        index++
+        return (translatedString.value = t(dialougeText[index].text))
       }
 
       // reset index and close dialouge
       toggleDialouge()
-      
-      return index = 0
-   }
+
+      return (index = 0)
+    }
 
     return {
       styles,
@@ -66,7 +66,6 @@ export default defineComponent({
     }
   }
 })
-
 </script>
 
 <style module lang="css">

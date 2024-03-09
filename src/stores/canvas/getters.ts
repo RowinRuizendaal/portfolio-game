@@ -1,7 +1,7 @@
 import type { State } from './state'
 
 export const getters = {
-    GettercanvasContext(state: State) {
-        return state.canvasContext
-    }
+  GettercanvasContext(state: State) {
+    return state.canvasContext
+  }
 }

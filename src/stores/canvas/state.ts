@@ -1,9 +1,9 @@
-import { reactive } from "vue";
+import { reactive } from 'vue'
 
 export interface State {
-    canvasContext: CanvasRenderingContext2D | null;
+  canvasContext: CanvasRenderingContext2D | null
 }
 
 export const state: State = reactive({
-    canvasContext: null,
-});
+  canvasContext: null
+})

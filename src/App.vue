@@ -11,7 +11,7 @@ import { defineComponent } from 'vue'
 import CanvasComponent from '@/components/Canvas'
 import DialougeComponent from '@/components/Dialouge'
 import MobileNavigationComponent from '@/components/MobileNavigation'
-import { intro } from './lib/dialogues';
+import { intro } from './lib/dialogues'
 import { music } from '@/lib/music'
 
 export default defineComponent({
@@ -39,5 +39,4 @@ export default defineComponent({
     }
   }
 })
-
 </script>

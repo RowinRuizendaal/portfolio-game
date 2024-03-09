@@ -1,3 +1,3 @@
-import DialougeComponent from './Dialouge.vue';
+import DialougeComponent from './Dialouge.vue'
 
-export default DialougeComponent;
+export default DialougeComponent
