@@ -13,6 +13,7 @@
 - [x] Player movement
 - [x] Player animation
 - [x] Sound effects
+- [x] Dialouges
 
 
 
